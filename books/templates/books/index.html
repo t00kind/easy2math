@@ -1,0 +1,51 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+      <title>Книги</title>
+      <meta charset="utf-8">
+      <link href="{% static 'css/header.css' %}" rel="stylesheet" type="text/css">
+      <link href="{% static 'css/body.css' %}" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap/dist/css/bootstrap.css' %}">
+      <script src="{% static 'js/book.js' %}"></script>
+      <link href="{% static 'css/book.css' %}" rel='stylesheet'>
+  </head>
+  <body>
+      <header class="topicv">
+          <a href='/' id="logo">easy2math</a>
+          <div class="sr">
+              <a class="this">Книги</a>
+              <a class="top" href="tasks/">Задачи</a>
+              <a class="top" href="lessons/">Уроки</a>
+          </div>
+          <hr id="hr">
+        </header>
+        <h1 class="mn">Книги</h1>
+    <div class="face">
+        <table>
+            <tr>
+        {% for i in bk %}
+                <td>
+                    <div class="content">
+                        <h2 class="txt">{{ i.title }}</h2>
+                        <p class="txt">{{ i.description }}</p>
+                        <p class="txt">автор: {{ i.author }}</p>
+                        <p class="txt">дата: {{ i.published|date:"d.m.Y H:i:s"}}</p>
+                        <ul class="button-group">
+                            <li><button class='button' onclick="dl(url);" id="dl">Скачать</button></li>
+                            <li><select id="sel" class='button' onchange="url=this.value">
+                                <option value="{{ i.pdf }}">pdf</option>
+                                <option value="{{ i.fb2 }}">fb2</option>
+                                <option value="{{ i.epub }}">epub</option>
+                                <option value="{{ i.mobi }}">mobi</option>
+                            </select></li>
+                        </ul>
+                    </div>
+                </td>
+            {% endfor %}
+            </tr>
+        </table>
+    </div>
+  </body>
+</html>
