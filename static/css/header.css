@@ -1,0 +1,27 @@
+#logo {
+    /* visual style */
+    color: #ee5a5a;
+    font-size: 44px;
+    background: radial-gradient(circle, #ff0000 0%, #ff5e00 27%,rgb(254, 19, 19)
+    51%, #ff8100 75%, #ff0000 100%);
+    text-shadow: 1px 1px 7px rgb(255, 71, 1), 1px 3px 6px rgba(255, 60, 0, 0.69);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
+    /* position style */
+    margin-top: -3%;
+    margin-left: 8px;
+}
+
+.top {
+    margin-left: 25px;
+    text-decoration: none;
+}
+
+.topic {
+    margin-top: -25px;
+}
+
+header {
+    background: #c1b2b466;
+}

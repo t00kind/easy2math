@@ -1,0 +1,41 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>easy2math</title>
+    <link href="{% static 'css/header.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/body.css' %}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap/dist/css/bootstrap.css' %}">
+    <link rel="icon" href="{% static 'images/bootstrap-icons/icons/book.svg' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">
+</head>
+<body>
+  <header class="topicv">
+        <a href='/' id="logo">easy2math</a>
+        <div class="sr">
+            <a class="top" href="books/">Книги</a>
+            <a class="top" href="tasks/">Задачи</a>
+            <a class="top" href="lessons/">Уроки</a>
+        </div>
+    <hr id="hr">
+  </header>
+  <h1 id="mn">Главная</h1>
+  <div class="face">
+  <table>
+      <tr>
+          {% for m in main %}
+          <td>
+              <div class="content">
+                  <h2 class="txt">{{ m.title }}</h2>
+                  <p class="txt">{{ m.content }}</p>
+                  <p class="txt">{{ m.published|date:'d.m.Y H:i:s' }}</p>
+              </div>
+          </td>
+          {% endfor %}
+      </tr>
+  </table>
+  </div>
+</body>
+</html>

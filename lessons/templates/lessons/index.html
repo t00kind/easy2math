@@ -1,0 +1,39 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>easy2math</title>
+    <link href="{% static 'css/header.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/body.css' %}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap/dist/css/bootstrap.css' %}">
+    <link rel="icon" href="{% static 'images/bootstrap-icons/icons/book.svg' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">
+</head>
+<body>
+  <header class="topicv">
+        <a href='/' id="logo">easy2math</a>
+        <div class="sr">
+            <a class="top" href="books/">Книги</a>
+            <a class="top" href="tasks/">Задачи</a>
+            <a class="this" href="lessons/">Уроки</a>
+        </div>
+    <hr id="hr">
+  </header>
+        {% for v in sudo %}
+            <div class="v-tb">
+                    <iframe id="video" width="560"
+                            height="315"
+                            src="{{ v.url }}"
+                            title="YouTube video player"
+                            frameborder="0" allow="accelerometer; autoplay;
+                            clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                    </iframe>
+                    <p>класс: {{ v.level }}</p>
+            </div>
+        {% endfor %}
+    </body>
+
+</html>
