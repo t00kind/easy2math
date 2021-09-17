@@ -33,7 +33,7 @@
                         <p class="txt">автор: {{ i.author }}</p>
                         <p class="txt">дата: {{ i.published|date:"d.m.Y H:i:s"}}</p>
                         <ul class="button-group">
-                            <li><button class='button' onclick="dl(url);" id="dl">Скачать</button></li>
+                            <li><button class='button btn-primary' onclick="dl(url);" id="dl">Скачать</button></li>
                             <li><select id="sel" class='button' onchange="url=this.value">
                                 <option value="{{ i.pdf }}">pdf</option>
                                 <option value="{{ i.fb2 }}">fb2</option>
