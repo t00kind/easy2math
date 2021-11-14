@@ -1,0 +1,25 @@
+{% extends "layouts/base.html" %}
+{% load static %}
+
+{% block head %}
+    {{ block.super }}
+    <link href="{% static 'css/task/task.css' %}" rel="stylesheet" type="text/css">
+    <link rel="icon" href="{% static 'images/bootstrap-icons/icons/chat-right-text.svg' %}">
+    <script src="{% static 'js/task/app.js' %}"></script>
+{% endblock %}
+
+{% block nav %}
+    {{ block.super }}
+{% endblock %}
+{% block content %}
+    <h1 class="h1-app">Задачи</h1>
+    {% for und in undo %}
+        <div class='contents'>
+            <h1>{{ und.title }}</h1>
+            <span class="task">{{ und.task }}</span>
+            <p id="lev">{{ und.level }}</p>
+            <p id="ans">{{ und.answer }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}
+

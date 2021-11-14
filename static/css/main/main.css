@@ -1,0 +1,15 @@
+.contents {
+    border-radius: 9px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    height: 30%;
+    padding: 1%;
+    background: linear-gradient(180deg, rgb( 88 77 77 / 15%), rgb(0 0 0 / 27%));
+    margin-top: 3%;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+.b {
+    margin-left: 7px;
+}

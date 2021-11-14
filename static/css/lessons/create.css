@@ -1,0 +1,13 @@
+body {
+    background: rgba(134, 183, 254, 0.15);
+}
+
+.create {
+    text-align: center;
+    background: #dce7ff;
+    font-family: Helvetica, serif;
+    font-size: large;
+    margin-left: 100px;
+    margin-right: 100px;
+    border-radius: 15px;
+}

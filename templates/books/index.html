@@ -1,0 +1,40 @@
+{% extends "layouts/base.html" %}
+{% load static %}
+
+{% block head %}
+    {{ block.super }}
+    <script src="{% static 'js/book/book.js' %}"></script>
+    <link href="{% static 'css/book/book.css' %}" rel='stylesheet'>
+    <link rel="icon" href="{% static 'images/bootstrap-icons/icons/book.svg' %}">
+{% endblock %}
+    {% block nav %}
+        {{ block.super }}
+    {% endblock %}
+{% block content %}
+        <h1 class="h1-app">Книги</h1>
+    <div class="face">
+        <table>
+            <tr>
+        {% for i in bk %}
+                <td>
+                    <div class="content">
+                        <h2 class="txt">{{ i.title }}</h2>
+                        <p class="txt">{{ i.description }}</p>
+                        <p class="txt">автор: {{ i.author }}</p>
+                        <p class="txt">дата: {{ i.published|date:"d.m.Y H:i:s"}}</p>
+                            <div class="btn-group" role="group">
+                                <button class="btn btn-outline-primary" onchange=" dl(url);" id="dl">Скачать</button>
+                                <select id="sel" class='form-control' onchange="url=this.value" onload="url=this.value">
+                                    <option value="{{ i.pdf }}">pdf</option>
+                                    <option value="{{ i.fb2 }}">fb2</option>
+                                    <option value="{{ i.epub }}">epub</option>
+                                    <option value="{{ i.mobi }}">mobi</option>
+                                </select>
+                            </div>
+                    </div>
+                </td>
+            {% endfor %}
+            </tr>
+        </table>
+    </div>
+{% endblock %}

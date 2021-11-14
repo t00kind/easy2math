@@ -1,0 +1,49 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ current_rubric.name }}</title>
+    <link href="{% static 'css/header.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/body.css' %}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap/dist/css/bootstrap.css' %}">
+    <link rel="icon" href="{% static 'images/bootstrap-icons/icons/book.svg' %}">
+    <link href = "{% static 'css/lessons/less.css' %}" rel = "stylesheet" type = "text/css" />
+    <link href = "{% static 'css/futura-pt/futura.css' %}" rel = "stylesheet" type = "text/css" />
+</head>
+<body>
+  <header class="navbar">
+      <nav>
+        <a href='{% url 'main' %}' id="logo">easy2math</a>
+        <div class="links">
+            <a class="lnk" href="{% url 'books' %}">Книги</a>
+            <a class="lnk" href="{% url 'tasks' %}">Задачи</a>
+            <a class="this lnk" href="{% url 'lessons' %}">Уроки</a>
+        </div>
+      </nav>
+    <hr id="hr">
+  </header>
+  <h1>Tag: {{ current_rubric.name }}</h1>
+  <div class="rubric">
+      {% for tag in tags %}
+      <a href="lessons/{{ tag.tg }}/">{{tag.name }}</a>
+      {% endfor %}
+  </div>
+        {% for ls in les %}
+            <div class="v-tb">
+                    <iframe id="video" width="560"
+                            height="315"
+                            src="https://youtube.com/embed/{{ ls.url }}"
+                            title="YouTube video player"
+                            frameborder="0" allow="accelerometer; autoplay;
+                            clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                    </iframe>
+                    <p id="category">{{ ls.tag }}</p>
+            </div>
+        {% endfor %}
+    </body>
+
+</html>
+

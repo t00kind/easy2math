@@ -1,0 +1,38 @@
+{% extends "layouts/base.html" %}
+{% load static %}
+
+{% block head %}
+    {{ block.super }}
+    <link rel="icon" href="{% static 'images/bootstrap-icons/icons/collection-play.svg' %}">
+    <link href = "{% static 'css/lessons/less.css' %}" rel = "stylesheet" type = "text/css" />
+    <script src="{% static 'js/lessons/app.js' %}"></script>
+{% endblock %}
+
+    {% block nav %}
+        {{ block.super }}
+    {% endblock %}
+{% block content %}
+  <h1 class="h1-app">Уроки</h1>
+  <a href="{% url 'add' %}"><button class="btn btn-primary" style="margin: 10px;">Добавить</button></a>
+  <h2>Tag: {{ current_rubric.name }}</h2>
+  <div class="rubric">
+      {% for i in tags %}
+      <a href="lessons/{{ tag.tg }}/">{{tag.name }}</a>
+      {% endfor %}
+  </div>
+        {% for v in sudo %}
+            <div class="v-tb">
+                    <iframe id="video" width="560"
+                            height="315"
+                            src="https://youtube.com/embed/{{ v.url }}"
+                            title="YouTube video player"
+                            frameborder="0" allow="accelerometer; autoplay;
+                            clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                    </iframe>
+                    <p id="category">{{ v.tag }}</p>
+                    <p><a href="/lessons/{{v.tag.name.tg }}/">{{ v.tag.name }}</a></p>
+                    <p id="level">{{ v.level }}</p>
+            </div>
+        {% endfor %}
+{% endblock %}

@@ -1,0 +1,29 @@
+#category {
+    color: #06c;
+    background: linear-gradient(180deg, rgb(88 77 77 / 15%), rgb(0 0 0 / 27%));
+    width: 10em;
+    margin-bottom: 7px;
+    margin-left: 23%;
+    border-radius: 7px;
+    text-align: center;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    backdrop-filter: blur(4px) contrast(1);
+    }
+
+ .v-tb {
+ border: 1px solid #d0d7de;
+ border-radius: 10px;
+ text-align: center;
+ margin-top: 10px;
+ margin-left: auto;
+ margin-right: auto;
+ display: block;
+ width: 577px;
+ padding: 7px;
+ background-color: #f3f3f3;
+}
+
+ iframe {
+ border-radius: 7px;
+ margin: 0px;
+ }

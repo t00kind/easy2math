@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+        {% block head %}
+        <title>{{ title }}</title>
+        <link href="{% static 'css/header.css' %}" rel="stylesheet" type="text/css">
+        <link href="{% static 'css/body.css' %}" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap/dist/css/bootstrap.css' %}">
+        <link href = "{% static 'css/futura-pt/futura.css' %}" rel = "stylesheet" type = "text/css" />
+        {% endblock %}
+</head>
+<body>
+{% block nav %}
+      <header class="navbar">
+        <nav>
+            <a href='{% url 'main' %}' id="logo">easy2math</a>
+            <div class="links">
+                <a class="lnk" href="{% url 'books' %}">Книги</a>
+                <a class="lnk" href="{% url 'tasks' %}">Задачи</a>
+                <a class="lnk" href="{% url 'lessons' %}">Уроки</a>
+            </div>
+        </nav>
+    <hr id="hr">
+  </header>
+{% endblock %}
+{% block content %}content{% endblock %}
+</body>
+</html>

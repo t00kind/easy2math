@@ -1,10 +1,10 @@
 from django.contrib import admin
-from .models import Ll, Level
+from .models import Lessons, Tag
 
 class LAdmin(admin.ModelAdmin):
-    list_display = ('url', 'level')
-    list_display_links = ('url', 'level')
-    search_fields = ('url', 'level')
+    list_display = ('url', 'tag')
+    list_display_links = ('url', 'tag')
+    search_fields = ('url', 'tag')
 
-admin.site.register(Ll, LAdmin)
-admin.site.register(Level)
+admin.site.register(Lessons, LAdmin)
+admin.site.register(Tag)

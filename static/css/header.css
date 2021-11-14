@@ -1,27 +1,46 @@
 #logo {
-    /* visual style */
+    /*/* visual style
     color: #ee5a5a;
     font-size: 44px;
     background: radial-gradient(circle, #ff0000 0%, #ff5e00 27%,rgb(254, 19, 19)
     51%, #ff8100 75%, #ff0000 100%);
     text-shadow: 1px 1px 7px rgb(255, 71, 1), 1px 3px 6px rgba(255, 60, 0, 0.69);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;*/
+    font-size: 44px;
     text-decoration: none;
+    color: #0007e3;
+    text-shadow: 0px 1px 5px #f2f2f5, 1px 1px 3px #000000;
     /* position style */
     margin-top: -3%;
     margin-left: 8px;
+    font-family: "Futura PT";
 }
 
-.top {
-    margin-left: 25px;
+.lnk {
+    color: #06c;
     text-decoration: none;
+    padding: 5px;
+
 }
 
-.topic {
-    margin-top: -25px;
+.lnk:hover {
+    color: rgb(4, 129, 255)
 }
 
-header {
-    background: #c1b2b466;
+.links {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    font-family: Helvetica, sans-serif;
+}
+nav {
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    background-color: #e2ddded4;
+    height: 70px;
+    backdrop-filter: saturate(180%) blur(20px);
+    box-shadow: 2px 0 14px rgb(169 160 160 / 48%), 0 0 3px rgb(185 185 189);
 }

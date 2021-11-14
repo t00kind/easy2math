@@ -1,0 +1,29 @@
+{% extends "layouts/base.html"%}
+{% load static %}
+
+    {% block head %}
+        <link rel="icon" href="{% static 'images/bootstrap-icons/icons/box.svg' %}">
+        <link href="{% static 'css/main/main.css' %}" rel="stylesheet" type="text/css">
+        {{ block.super }}
+    {% endblock %}
+    {% block nav %}
+        {{ block.super }}
+    {% endblock %}
+{% block content %}
+  <h1 class="h1-app">Главная</h1>
+  <div class="auth">
+  <button class="b btn btn-primary" id="reg">Регистрация</button>
+  <button class="b btn btn-outline-success" id="login">Войти</button>
+  </div>
+      <tr>
+          {% for m in main %}
+          <td>
+              <div class="contents">
+                  <h2 class="title">{{ m.title }}</h2>
+                  <p class="content">{{ m.content }}</p>
+                  <p class="date">{{ m.published|date:'d.m.Y H:i:s' }}</p>
+              </div>
+          </td>
+          {% endfor %}
+      </tr>
+{% endblock %}

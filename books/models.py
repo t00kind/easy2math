@@ -1,7 +1,7 @@
 from django.db import models
 
 
-class Mm(models.Model):
+class Books(models.Model):
     title = models.CharField(max_length=50, verbose_name="Название")
     description = models.TextField(null=True, blank=True, verbose_name="Описание")
     pdf = models.CharField(null=True, blank=True, verbose_name="pdf", max_length=50)

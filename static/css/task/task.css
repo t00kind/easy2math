@@ -1,0 +1,19 @@
+.contents {
+    border-radius: 9px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    height: 30%;
+    padding: 1%;
+    background: linear-gradient(180deg, rgb(39 120 139 / 15%), rgb(56 58 106 / 27%));
+    margin-top: 3%;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+#lev {
+    border-radius: 7px;
+    width: 5em;
+    background: linear-gradient(rgb(97 153 223 / 20%), rgb(56 58 106 / 8%));
+    text-align: center;
+    margin-top: 7px;
+}

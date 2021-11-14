@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Добавить тэг, наверно</title>
+    <link href = "{% static 'css/lessons/create.css' %}" rel = "stylesheet" type = "text/css"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap/dist/css/bootstrap.css' %}">
+</head>
+<body>
+    <div class="create">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Добавить" class="btn btn-success">
+        </form>
+    </div>
+</body>
+</html>

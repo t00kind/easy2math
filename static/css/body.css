@@ -1,29 +1,3 @@
-.face {
-  background: rgb(176 78 78 / 7%);
-  margin-top: -17px;
-  border-radius: 29px;
-
-}
-
-.sr {
-  text-align: center;
-  margin-top: -25px;
-}
-
-.content {
-  background-color: #bf737d66;;
-  margin-left: 15%;
-  border-radius: 9px;
-  width: 250px;
-  height: 250px;
-  margin: 7px;
-}
-
-
-.txt {
-  margin: 10px;
-}
-
 .this {
   text-decoration: none;
   color: var(--bs-red);
@@ -33,24 +7,11 @@
   color: var(--bs-pink);
 }
 
-table {
-  margin-left: 10%;
-}
-
 body {
   background: var(--bs-light);
   --btn-bor1: 25px;
 }
 
-#mn {
-  padding: 7px;
-  padding-bottom: 15px;
-}
-
-@media (max-width: 480px) {
-  .content {
-    height: auto;
-    width: auto;
-  }
-  
+.h1-app {
+  margin: 7px;
 }

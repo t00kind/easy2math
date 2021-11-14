@@ -1,10 +1,10 @@
 from django.contrib import admin
-from .models import Tt, Level
+from .models import Task
 
 class TtAdmin(admin.ModelAdmin):
-    list_display = ('level',)
-    list_display_links = ('level',)
-    searc_fields = ('level',)
+    list_display = ('task',)
+    list_display_links = ('task',)
+    searc_fields = ('task',)
 
-admin.site.register(Tt, TtAdmin)
-admin.site.register(Level)
+admin.site.register(Task, TtAdmin)
+ 

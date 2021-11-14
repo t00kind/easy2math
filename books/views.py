@@ -1,7 +1,7 @@
 from django.shortcuts import render
-from .models import Mm
+from .models import Books
 
-
-def booking(request):
-    bk = Mm.objects.all()
-    return render(request, 'books/index.html', {'bk': bk})
+def main(requests):
+    bk = Books.objects.all()
+    title = "Книги"
+    return render(requests, '../templates/books/index.html', {'bk': bk, "title": title})
